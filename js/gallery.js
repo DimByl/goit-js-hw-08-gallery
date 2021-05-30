@@ -11,7 +11,7 @@ const ref = {
 const arrayLinks = [];
 galleryItem.forEach(item => arrayLinks.push(item.original));
 
-function createGalleryEl (items) {
+function createGalleryE (items) {
 return items.map(({ preview, original, description}) => 
 `<li class="gallery__item">
   <a
@@ -29,7 +29,7 @@ return items.map(({ preview, original, description}) =>
 ).join('');
 };
 
-galletyBackgroundE.innerHTML = createGalleryEl(galleryItem);
+galletyBackgroundE.innerHTML = createGalleryE(galleryItem);
 
 galletyBackgroundE.addEventListener('click', clickOnImage);
 
@@ -69,7 +69,7 @@ function closeLightboxByBtn () {
 };
 
 function closeLightboxByOvelayClick () {
-  ref.lightboxEl.classList.remove('is-open');
+  ref.lightboxE.classList.remove('is-open');
   ref.lightboxImageE.src = '';
   ref.lightboxImageE.alt = '';
   
